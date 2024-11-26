@@ -5,7 +5,7 @@ namespace demoapis.Namespace
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Productsontroller : ControllerBase
+    public class ProductsController : ControllerBase
     {
     
 
