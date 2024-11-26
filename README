@@ -1,0 +1,30 @@
+# API para tarea 
+
+
+## Ejecutar con .net
+
+* Se debe de instalar el sdk de .net 8.0 o mas. esto se puede descargar desde el link https://dotnet.microsoft.com/en-us/download
+* Una vez instalado en el directorio donde se clono el proyecto ejecutar:
+
+```
+dotnet restore
+dotnet run
+```
+
+* Despues podran ver en que puerto esta corriendo y utilizar la api. ej. http://localhost:5031
+* Pueden ver la documentacion de swagger en el siguiente link http://localhost:5031/swagger/index.html
+
+## Ejecutar con docker
+
+* El proyecto cuenta con un Dockerfile para crear una imagen. ir a la carpeta y ejecutar:
+```
+docker build .
+docker build . -t demoapis
+```
+* Si todo sale bien se tendra una imagen con las etiqueta demoapis para ejecutar este contenedor correr el siguiente comando o una variacion del mismo:
+
+```
+docker run --name demoapi -p 8080:8080  demoapi
+```
+* Este mapea el puerto 8080 al puerto 8080 donde corre internamente la api.
+* Swagger esta habilidatado tambien en produccion. 
